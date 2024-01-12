@@ -1,0 +1,19 @@
+[package]
+name = "zcash_address_wasm"
+description = "A Javascript API providing Zcash Unified Address parsing and serialization via the zcash_address crate." 
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.66"
+authors = [
+    "Kris Nuttycombe <kris@electriccoin.co>"
+]
+homepage = "https://github.com/zcash/zcash_address_wasm"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+wasm-bindgen = "0.2.89"
+zcash_address = "0.3.1"
+
+[lib]
+crate-type = ["cdylib"]

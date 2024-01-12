@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>zcash_address_wasm example</title>
+  </head>
+  <body>
+    <script type="module">
+      import init, { to_traceable_address } from "../pkg/zcash_address_wasm.js";
+      init().then(() => {
+        var t_address = "t1VmmGiyjVNeCjxDZzg7vZmd99WyzVby9yC";
+
+        var expiry_time = new Date();
+        expiry_time.setDate(expiry_time.getDate() + 30);
+        var expiry_unix_seconds = BigInt(Math.floor(expiry_time.getTime() / 1000));
+
+        var traceable_address = to_traceable_address(t_address, expiry_unix_seconds);
+        console.log(traceable_address);
+      });
+    </script>
+  </body>
+</html>
