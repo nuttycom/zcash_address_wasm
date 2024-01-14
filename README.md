@@ -6,6 +6,21 @@ functionality in support of [ZIP 320](https://github.com/zcash/zips/pull/760).
 In the future, it may be extended to provide more comprehensive handling for
 various Zcash address types.
 
+## Building
+
+To build this library for local experimentation, use:
+
+```
+wasm-pack build --target web
+```
+
+To try out the example code locally, run:
+
+```
+npx live-server
+```
+from the root directory and then point your browser to `example/index.html`.
+
 ## Security Warnings
 
 These libraries are currently under development and have not been fully-reviewed.
